@@ -1,6 +1,6 @@
 # Encoding: utf-8
 
-include_recipe 'nginx'
+#include_recipe 'nginx'
 
 template File.join(node['nginx']['dir'], 'sites-available', 'kibana') do
   source 'nginx.erb'
@@ -11,6 +11,7 @@ template File.join(node['nginx']['dir'], 'sites-available', 'kibana') do
   )
 end
 
-nginx_site 'kibana' do
-  enable true
-end
+
+#nginx_site 'kibana' do
+#  enable true
+#end
