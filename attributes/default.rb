@@ -3,8 +3,7 @@
 #<> Kibana version
 default['kibana']['version'] = '4'
 #<> Kibana3 exact version
-default['kibana']['kibana3_version'] = '3.0.0'
-default['kibana']['kibana4_version'] = '4.0.0'
+default['kibana']['kibana3_version'] = '4.0.0-BETA1.1'
 #<> The base directory of kibana.
 default['kibana']['base_dir'] = '/opt/kibana'
 #<> The user under which Kibana is installed.
@@ -15,6 +14,7 @@ default['kibana']['group'] = 'kibana'
 default['kibana']['install_method'] = 'release'
 #<> Url of tarball
 default['kibana']['url'] = "https://download.elasticsearch.org/kibana/kibana/kibana-#{node['kibana']['kibana3_version']}.tar.gz"
+
 #<> Checksum of the tarball
 default['kibana']['checksum'] = 'df25bc0cc02385edcac446ef8cbd83b896cdc910a0fa1b0a7bd2a958164593a8'
 #<> The URL to Kibana repository.
