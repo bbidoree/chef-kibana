@@ -1,9 +1,10 @@
 # Encoding: utf-8
 
 #<> Kibana version
-default['kibana']['version'] = '2'
+default['kibana']['version'] = '4'
 #<> Kibana3 exact version
 default['kibana']['kibana3_version'] = '3.0.0'
+default['kibana']['kibana4_version'] = '4.0.0'
 #<> The base directory of kibana.
 default['kibana']['base_dir'] = '/opt/kibana'
 #<> The user under which Kibana is installed.
@@ -29,7 +30,7 @@ default['kibana']['git']['reference'] = if node['kibana']['version'] > '2'
                                           'v0.2.0'
                                         end
 #<> The version of Ruby and Gems to use for Kibana.
-default['kibana']['rubyversion'] = '1.9.1'
+default['kibana']['rubyversion'] = '2.0.0'
 
 #<> The interface on which to bind.
 default['kibana']['interface'] = node['ipaddress']
