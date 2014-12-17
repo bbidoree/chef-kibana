@@ -32,3 +32,13 @@ template File.join(node['kibana']['base_dir'], config_path) do
   mode '0644'
   variables('es_port' => node['kibana']['elasticsearch']['port'])
 end
+
+template "/etc/init.d/kibana" do
+  source "kibana.init.erb"
+  owner 'root' and mode 0755
+end
+
+service "kibana" do
+  supports :status => true, :restart => true
+  action [ :enable ]
+end
